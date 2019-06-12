@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <hellfire.h>
 
 int maze11x21_01[] = {
 	-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
@@ -479,7 +479,7 @@ int solve(int *m, int lin, int col, int si, int sj, int ei, int ej)
 	return search(m, si, sj, ei, ej, lin, col);
 }
 
-int app_main(void)
+void app_main(void)
 {
 	struct maze_s *m;
 	int i, s, k = 0;

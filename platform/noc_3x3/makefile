@@ -1,4 +1,4 @@
-APP = app/labyrinth2
+APP = app/labyrinth
 ARCH = mips/plasma
 
 CPU_ARCH = \"$(ARCH)\"
