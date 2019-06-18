@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include <hellfire.h>
+#include <noc.h>
 
 int maze11x21_01[] = {
 	-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,
@@ -479,12 +480,24 @@ int solve(int *m, int lin, int col, int si, int sj, int ei, int ej)
 	return search(m, si, sj, ei, ej, lin, col);
 }
 
-int app_main(void)
+void app_main(void)
 {
 	struct maze_s *m;
 	int i, s, k = 0;
+	uint64_t tempo;
+
+	tempo = _read_us(); 
+	// printf("\nread_us: %08x%08x\n", (tempo >> 32), (tempo & 0xffffffff));
+	// tempo = _read_us(); 
+	// printf("\nread_us: %08x%08x\n", (tempo >> 32), (tempo & 0xffffffff));
 
 	for (i = 0; i < sizeof(mazes) / sizeof(struct maze_s); i++) {
+		
+		int cpuid = hf_cpuid();
+		int idx = i;
+		while(idx>=9) idx-=9;
+		if (idx != cpuid) continue;
+
 		m = &mazes[i];
 		s = solve(m->maze, m->lines, m->columns, m->start_line, m->start_col, m->end_line, m->end_col);
 		if (s) {
@@ -496,7 +509,10 @@ int app_main(void)
 	};
 	printf("\nsummary: %d of %d solved\n", k, i);
 
-	printf("tempo de execucao: %d", _read_us());
+	tempo = _read_us() - tempo;
 
-	return 0;
+	printf("\nread_us: %ld\n", tempo);
+
+	panic(0);
+	
 }

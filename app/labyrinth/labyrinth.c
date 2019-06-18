@@ -486,11 +486,10 @@ void app_main(void)
 	uint64_t tempo;
 
 	tempo = _read_us(); 
-	printf("\nread_us: %08x%08x\n", (tempo >> 32), (tempo & 0xffffffff));
-	tempo = _read_us(); 
-	printf("\nread_us: %08x%08x\n", (tempo >> 32), (tempo & 0xffffffff));
+	// printf("\nread_us: %08x%08x\n", (tempo >> 32), (tempo & 0xffffffff));
+	// tempo = _read_us(); 
+	// printf("\nread_us: %08x%08x\n", (tempo >> 32), (tempo & 0xffffffff));
 
-	tempo = _read_us(); 
 	for (i = 0; i < sizeof(mazes) / sizeof(struct maze_s); i++) {
 		m = &mazes[i];
 		s = solve(m->maze, m->lines, m->columns, m->start_line, m->start_col, m->end_line, m->end_col);
@@ -505,7 +504,8 @@ void app_main(void)
 
 	tempo = _read_us() - tempo;
 
-	printf("\nread_us: %08x%08x\n", (tempo >> 32), (tempo & 0xffffffff));
+	printf("\nread_us: %ld\n", tempo);
 
 	panic(0);
+	
 }
