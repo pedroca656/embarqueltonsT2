@@ -1,0 +1,41 @@
+
+Code Execution Report - Core 11
+
+CPU cycles: 250000001
+WCET: 10000.0000ms
+Estimated energy consumption: 0.300996J (20587 gates Plasma CPU core, CMOS TSMC 0.35um)
+
+Instructions (MIPS I instruction set):
+       J:  124600655;      JAL:       1372;      BEQ:       1646;      BNE:     128890; 
+    BLEZ:          4;     BGTZ:          0;     ADDI:          0;    ADDIU:     129962; 
+    SLTI:         34;    SLTIU:          7;     ANDI:        344;      ORI:         79; 
+    XORI:          1;      LUI:       1245;     COP0:        462;     BEQL:          0; 
+    BNEL:          0;    BLEZL:          0;    BGTZL:          0;       LB:        856; 
+      LH:          0;       LW:       2211;      LBU:         47;      LHU:          9; 
+      SB:        761;       SH:        221;       SW:     129381;       LL:          0; 
+      SC:          0;      SLL:       1160;      SRL:       1091;      SRA:          0; 
+    SLLV:         96;     SRLV:          0;     SRAV:          0;       JR:       1373; 
+    JALR:          0;     MOVZ:          0;     MOVN:          0;     MFHI:         96; 
+    MTHI:          0;     MFLO:         31;     MTLO:          0;     MULT:          0; 
+   MULTU:          0;      DIV:         91;     DIVU:          5;      ADD:          0; 
+    ADDU:        530;      SUB:          0;     SUBU:        501;      AND:        170; 
+      OR:       1881;      XOR:          0;      NOR:          0;      SLT:     126240; 
+    SLTU:        509;    DADDU:          0;     BLTZ:         13;     BGEZ:        177; 
+   BLTZL:          0;    BGEZL:          0;   BLTZAL:          0;   BGEZAL:          0; 
+ BLTZALL:          0;  BGEZALL:          0; 
+
+Instructions executed: 125132151
+Effective instructions per cycle (IPC): 0.500529
+I/O wait cycles: 0
+
+Instructions executed from each class:
+Arithmetic:        257879 (0.206085%)
+Branch/Jump:    124734130 (99.681923%)
+Load/Store:        133486 (0.106676%)
+Logical:             3720 (0.002973%)
+Move:                 589 (0.000471%)
+Shift:               2347 (0.001876%)
+
+Flits sent: 0
+Flits received: 0
+Broadcasts: 0

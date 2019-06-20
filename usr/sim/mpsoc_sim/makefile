@@ -4,6 +4,7 @@ CORES2 = 0 1
 CORES2x2 = 0 1 2 3
 CORES3x2 = 0 1 2 3 4 5
 CORES3x3 = 0 1 2 3 4 5 6 7 8
+CORES3x4 = 0 1 2 3 4 5 6 7 8 9 10 11
 CORES4x4 = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 CORES6x5 = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
 CORES8x8 = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 \
@@ -29,6 +30,8 @@ noc_3x2:
 	$(GCC) -o mpsoc_sim ./source/mpsoc_sim.c ./source/noc.c -lm -DN_CORES=6 -DNOC_WIDTH=3 -DNOC_HEIGHT=2 -DNOC_BUFFER_SIZE=16 -DOS_PACKET_SIZE=64
 noc_3x3:
 	$(GCC) -o mpsoc_sim ./source/mpsoc_sim.c ./source/noc.c -lm -DN_CORES=9 -DNOC_WIDTH=3 -DNOC_HEIGHT=3 -DNOC_BUFFER_SIZE=16 -DOS_PACKET_SIZE=64
+noc_3x4:
+	$(GCC) -o mpsoc_sim ./source/mpsoc_sim.c ./source/noc.c -lm -DN_CORES=12 -DNOC_WIDTH=3 -DNOC_HEIGHT=4 -DNOC_BUFFER_SIZE=16 -DOS_PACKET_SIZE=64
 noc_4x4:
 	$(GCC) -o mpsoc_sim ./source/mpsoc_sim.c ./source/noc.c -lm -DN_CORES=16 -DNOC_WIDTH=4 -DNOC_HEIGHT=4 -DNOC_BUFFER_SIZE=16 -DOS_PACKET_SIZE=64
 noc_6x5:

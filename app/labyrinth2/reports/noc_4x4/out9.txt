@@ -1,0 +1,28 @@
+
+KERNEL: booting...
+===========================================================
+HellfireOS v2.19.03 (4.9.3) [Jun 20 2019, 14:54:57]
+Embedded Systems Group - GSE, PUCRS - [2007 - 2019]
+===========================================================
+
+arch:          mips/plasma
+sys clk:       25000 kHz
+time slice:    10480 us
+heap size:     500000 bytes
+max tasks:     30
+
+HAL: _vm_init()
+HAL: _sched_init()
+HAL: _timer_init()
+HAL: _irq_init()
+HAL: _device_init()
+KERNEL: this is core #9
+KERNEL: NoC queue init, 64 packets
+KERNEL: NoC driver registered
+HAL: _task_init()
+KERNEL: [idle task], id: 0, p:0, c:0, d:0, addr: 100002b4, sp: 100143b8, ss: 1024 bytes
+summary: 0 of 15 solved
+
+read_us: 111
+
+KERNEL: panic [task 0] - execution aborted -> system halted.

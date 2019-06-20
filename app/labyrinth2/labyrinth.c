@@ -511,7 +511,7 @@ void app_main(void)
 
 	tempo = _read_us() - tempo;
 
-	printf("\nread_us: %ld\n", tempo);
+	printf("\nread_us: %d\n", (uint32_t)tempo);
 
 	panic(0);
 	
