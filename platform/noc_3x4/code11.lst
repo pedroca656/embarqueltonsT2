@@ -936,10 +936,10 @@ Disassembly of section .text:
 10000e30:	3c041000 	lui	a0,0x1000
 10000e34:	0c00079e 	jal	10001e78 <hf_cpuid>
 10000e38:	00000000 	nop
-10000e3c:	2a030009 	slti	v1,s0,9
+10000e3c:	2a03000c 	slti	v1,s0,12
 10000e40:	14600031 	bnez	v1,10000f08 <app_main+0x13c>
 10000e44:	02003025 	move	a2,s0
-10000e48:	2606fff7 	addiu	a2,s0,-9
+10000e48:	2606fff4 	addiu	a2,s0,-12
 10000e4c:	2631001c 	addiu	s1,s1,28
 10000e50:	14c2fff5 	bne	a2,v0,10000e28 <app_main+0x5c>
 10000e54:	00000000 	nop

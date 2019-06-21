@@ -493,12 +493,12 @@ void app_main(void)
 
 	for (i = 0; i < sizeof(mazes) / sizeof(struct maze_s); i++) {
 		
-		int NOC_COUNT = 16;
+		int NOC_COUNT = 12;
 
 		int cpuid = hf_cpuid();
 		int idx = i;
 		while(idx>=NOC_COUNT) idx-=NOC_COUNT;
-		if (idx != cpuid) continue; // Se não for o processdor certo, não executar está iteração do laço
+		if (idx != cpuid) continue; // Se não for o processdor certo, não executar esta iteração do laço
 
 		m = &mazes[i];
 		s = solve(m->maze, m->lines, m->columns, m->start_line, m->start_col, m->end_line, m->end_col);

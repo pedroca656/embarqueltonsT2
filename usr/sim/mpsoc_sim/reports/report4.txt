@@ -6,10 +6,10 @@ WCET: 10000.0000ms
 Estimated energy consumption: 0.301681J (20587 gates Plasma CPU core, CMOS TSMC 0.35um)
 
 Instructions (MIPS I instruction set):
-       J:  124358804;      JAL:       1784;      BEQ:      59209;      BNE:     183857; 
-    BLEZ:       3047;     BGTZ:          0;     ADDI:          0;    ADDIU:     242445; 
-    SLTI:         67;    SLTIU:        196;     ANDI:        532;      ORI:         79; 
-    XORI:          1;      LUI:       1642;     COP0:        462;     BEQL:          0; 
+       J:  124358780;      JAL:       1784;      BEQ:      59210;      BNE:     183870; 
+    BLEZ:       3047;     BGTZ:          0;     ADDI:          0;    ADDIU:     242447; 
+    SLTI:         81;    SLTIU:        196;     ANDI:        532;      ORI:         79; 
+    XORI:          1;      LUI:       1655;     COP0:        462;     BEQL:          0; 
     BNEL:          0;    BLEZL:          0;    BGTZL:          0;       LB:       1406; 
       LH:          0;       LW:      56999;      LBU:        169;      LHU:          9; 
       SB:        882;       SH:        221;       SW:     130736;       LL:          0; 
@@ -19,20 +19,20 @@ Instructions (MIPS I instruction set):
     MTHI:          0;     MFLO:        202;     MTLO:          0;     MULT:         49; 
    MULTU:          0;      DIV:         90;     DIVU:        128;      ADD:          0; 
     ADDU:      11931;      SUB:          0;     SUBU:        638;      AND:        170; 
-      OR:       9085;      XOR:          1;      NOR:          0;      SLT:     185083; 
+      OR:       9101;      XOR:          1;      NOR:          0;      SLT:     185083; 
     SLTU:        509;    DADDU:          0;     BLTZ:        107;     BGEZ:        177; 
    BLTZL:          0;    BGEZL:          0;   BLTZAL:          0;   BGEZAL:          0; 
  BLTZALL:          0;  BGEZALL:          0; 
 
-Instructions executed: 125255443
+Instructions executed: 125255478
 Effective instructions per cycle (IPC): 0.501022
 I/O wait cycles: 0
 
 Instructions executed from each class:
-Arithmetic:        441136 (0.352189%)
-Branch/Jump:    124608864 (99.483795%)
+Arithmetic:        441152 (0.352202%)
+Branch/Jump:    124608854 (99.483757%)
 Load/Store:        190422 (0.152027%)
-Logical:            11510 (0.009189%)
+Logical:            11539 (0.009212%)
 Move:                 882 (0.000704%)
 Shift:               2629 (0.002099%)
 
